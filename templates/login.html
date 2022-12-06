@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!-- Start Page Title Area -->
+		<div class="page-title-area page-title-bg1" style="background-image:url();">
+			<div class="container">
+				<div class="page-title-content">
+					<h2>My account</h2>
+
+												<ul>
+								<li><a href="https://themes.envytheme.com/vaximo/">Home</a></li>
+								<li class="active">My account</li>
+							</ul>				</div>
+			</div>
+		</div>
+	<!-- End Page Title Area -->
+
+	<div class="page-main-content">		<div class="page-area ">
+			<div class="container">																			
+<article id="post-11" class="post-11 page type-page status-publish hentry">
+	<div class="entry-content">
+        {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <p  style="color:red" {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </p>
+    {% endfor %}
+</ul>
+{% endif %}
+		<div class="woocommerce"><div class="woocommerce-notices-wrapper"></div>
+
+            <h3 class="title">Login</h3>
+
+            <form class="woocommerce-form woocommerce-form-login login" method="POST">
+                {% csrf_token %}
+
+                
+                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                    <label for="username">Email address&nbsp;<span class="required">*</span></label>
+                    {{form.username}}
+<!--                    <input type="text" class="woocommerce-Input woocommerce-Input&#45;&#45;text input-text form-control" name="email" id="email" autocomplete="email" value="" /></p>-->
+                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                    <label for="password">Password&nbsp;<span class="required">*</span></label>
+                {{form.password}}
+<!--                    <input class=" woocommerce-Input&#45;&#45;text input-text form-control" type="password" name="password" id="password" autocomplete="current-password" />-->
+                </p>
+
+                
+                <p class="form-row">
+                    <label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
+                        <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span>Remember me</span>
+                    </label>
+                    <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="c7d75075ba" /><input type="hidden" name="_wp_http_referer" value="/vaximo/my-account/" />                    <button type="submit" class="woocommerce-button button woocommerce-form-login__submit btn btn-primary order-btn" name="login" value="Log in">Log in</button>
+                </p>
+                <p class="woocommerce-LostPassword lost_password">
+                    <a href="https://themes.envytheme.com/vaximo/my-account/lost-password/">Lost your password?</a> <br>  <a href="{% url 'register' %}">Don't have account</a>
+                </p>
+
+                
+            </form>
+
+        
+</div>
+	</div><!-- .entry-content -->
+
+	</article><!-- #post-11 -->
+											</div>		</div>
+	</div>
+	<!-- Footer -->
+	<!-- Start Footer Area -->
+{% endblock %}

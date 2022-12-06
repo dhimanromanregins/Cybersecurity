@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+    	<!-- Start Page Title Area -->
+		<div class="page-title-area page-title-bg1" style="background-image:url();">
+			<div class="container">
+				<div class="page-title-content">
+					<h2>My account</h2>
+
+												<ul>
+								<li><a href="https://themes.envytheme.com/vaximo/">Home</a></li>
+								<li class="active">My account</li>
+							</ul>				</div>
+			</div>
+		</div>
+	<!-- End Page Title Area -->
+
+	<div class="page-main-content">		<div class="page-area ">
+			<div class="container">
+<article id="post-11" class="post-11 page type-page status-publish hentry">
+	<div class="entry-content">
+		<div class="woocommerce"><div class="woocommerce-notices-wrapper"></div>
+
+            <h3 class="title">Register</h3>
+
+
+
+            <form class="woocommerce-form woocommerce-form-login login" onsubmit="yourJsFunction();return false" id="my-form" action = "#" method = "POST">
+                {{form.errors}}
+                {% csrf_token %}
+                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                    <label for="username">Username<span class="required">*</span></label>
+                    {{form.username}}
+                    {{form.username.help_text}}
+                </p>
+                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                    <label for="username">Email Address<span class="required">*</span></label>
+                    {{form.email}}
+                </p>
+                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                    <label for="password">Password<span class="required">*</span></label>
+                    {{form.password1}}
+                </p>
+                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                    <label for="password">Confirm Password&nbsp;<span class="required">*</span></label>
+                    {{form.password2}}
+                </p>
+                <p class="form-row">
+                    <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="c7d75075ba" /><input type="hidden" name="_wp_http_referer" value="/vaximo/my-account/" />
+                    <button type="submit" class="woocommerce-button button woocommerce-form-login__submit btn btn-primary order-btn" name="login" value="Log in">Register</button>
+                </p>
+                <p class="woocommerce-LostPassword lost_password">
+                    <a href="{% url 'login' %}">Already have account?</a>
+                </p>
+
+
+            </form>
+
+
+</div>
+	</div><!-- .entry-content -->
+
+	</article><!-- #post-11 -->
+											</div>		</div>
+	</div>
+	<!-- Footer -->
+	<!-- Start Footer Area -->
+{% endblock %}
