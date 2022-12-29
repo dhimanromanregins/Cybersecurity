@@ -1,0 +1,191 @@
+{% extends 'project-compoments/base.html' %}
+{% block content %}
+{% include 'project-compoments/header.html' %}
+{% load static %}
+<style>
+	.bx {
+    font-family: boxicons!important;
+    font-weight: 800;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    display: inline-block;
+    text-transform: none;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #d80650;
+}
+</style>
+
+<div class="page-title-area" style="background-image:url();">
+		<div class="container">
+
+			<div class="page-title-content">
+									<h2>{{blog_data.title}}</h2>
+
+										<ul>
+															<li><a href="https://themes.envytheme.com/vaximo/">Home</a></li>
+														<li><a href="https://themes.envytheme.com/vaximo/blog/">Blog</a></li>
+															<li class="active">{{blog_data.title}}</li>
+													</ul>			</div>
+
+		</div>
+	</div>
+
+	<!-- Start Blog Area -->
+	<div class="blog-details-area ptb-100 ">
+		<div class="container">
+			<div class="row">
+									<div class="col-lg-8 col-md-12">
+						<div class="blog-details">
+															<div class="article-img">
+									<img src="{{blog_data.image_url}}" alt="{{blog_data.title}}">
+								</div>
+							<div class="blog-details-content">
+																	<ul class="entry-meta">
+                    <li>
+                        <a href="https://themes.envytheme.com/vaximo/author/vaximo/">
+                            {{blog_data.name}}                       </a>
+                    </li>
+                    <li>
+                        {{blog_data.blog_created}}                   </li>
+                    <li>
+                        No Comments                    </li>
+                </ul>
+
+<p>{{blog_data.small_description}}</p>
+
+
+
+<p>{{blog_data.description}}</p>
+
+
+
+<blockquote class="wp-block-quote"><p>{{blog_data.quote}}</p></blockquote>
+
+
+
+<p>{{blog_data.description}}</p>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-1 wp-block-gallery has-nested-images columns-default is-cropped">
+<figure class="wp-block-image size-large"><img decoding="async" width="750" height="500" data-id="339"  src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/07/blog_img_1-1-1-1-1.jpg" alt="" class="wp-image-339" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/07/blog_img_1-1-1-1-1.jpg 750w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/07/blog_img_1-1-1-1-1-300x200.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/07/blog_img_1-1-1-1-1-530x353.jpg 530w" sizes="(max-width: 750px) 100vw, 750px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="750" height="500" data-id="340"  src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/07/blog_img_2-1-1-1-1.jpg" alt="" class="wp-image-340" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/07/blog_img_2-1-1-1-1.jpg 750w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/07/blog_img_2-1-1-1-1-300x200.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/07/blog_img_2-1-1-1-1-530x353.jpg 530w" sizes="(max-width: 750px) 100vw, 750px" /></figure>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="750" height="500" data-id="338"  src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/07/blog_img_6-1-1-1-1.jpg" alt="" class="wp-image-338" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/07/blog_img_6-1-1-1-1.jpg 750w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/07/blog_img_6-1-1-1-1-300x200.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/07/blog_img_6-1-1-1-1-530x353.jpg 530w" sizes="(max-width: 750px) 100vw, 750px" /></figure>
+</figure>
+
+
+
+<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences.</p>
+
+
+
+<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure.</p>
+
+															</div>
+						</div>
+
+
+<div id="comments" class="comments-area">
+{% for i in comments %}
+    <h2 class="comments-title">
+			{{length}} Comments		</h2><!-- .comments-title -->
+
+
+		<ol class="comment-list">
+
+					<li id="{{i.comments}}" class="comment even thread-even depth-1">
+			<article id="div-comment-8" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="https://secure.gravatar.com/avatar/c9b2d09a2090db70f66851f698128f04?s=85&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/c9b2d09a2090db70f66851f698128f04?s=170&amp;d=mm&amp;r=g 2x" class="avatar avatar-85 photo" height="85" width="85" loading="lazy" decoding="async">						<b class="fn"><a href="{{i.website}}" rel="external nofollow ugc" class="url">{{i.name}}</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://themes.envytheme.com/vaximo/security-in-a-fragment-world-of-workload-for-your-business-2/#comment-8"><time datetime="2022-12-07T10:09:43+00:00">December 7, 2022 at 10:09 am</time></a>					</div><!-- .comment-metadata -->
+
+										<em class="comment-awaiting-moderation">Your comment is awaiting moderation.</em>
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>{{i.comment}}</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="#" data-commentid="8" data-postid="776" data-belowelement="div-comment-8" data-respondelement="respond" data-replyto="Reply to {{i.name}}" aria-label="Reply to {{i.name}}">Reply</a></div>			</article><!-- .comment-body -->
+		</li>
+            {% endfor %}<!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="#" style="display:none;">Cancel reply</a></small></h3>
+            <form action="#" method="POST" id="commentform" class="comment-form" novalidate>
+                {% csrf_token %}
+                <p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p>
+                <p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+                <input value="{{blog_data.id}}" name="blog_id" type="hidden">
+                <p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post a Comment" /> <input type='hidden' name='comment_post_ID' value='776' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p></form>
+        </div><!-- #respond -->
+
+</div><!-- #comments -->
+					</div>
+									<div class="col-lg-4 col-md-12">
+				<div id="secondary" class="title blog-sidebar widget-area">
+
+		<div id="search-2" class="widget widget_search"><form role="search" method="get" id="search" action="https://themes.envytheme.com/vaximo/" class="search-form">
+    <label>
+        <input type="search" class="search-field" placeholder="Search..." value="" name="s" id="s" required>
+    </label>
+    <button type="submit" class="search-submit"><i class="fas fa-search"></i></button>
+</form></div><div id="vaximo_posts_thumbs-2" class="widget widget_vaximo_posts_thumbs"><h2 class="widget-title">Recent posts</h2>
+                    <article class="item post-776 post type-post status-publish format-standard has-post-thumbnail hentry category-hacker">
+{% for q in blogs %}
+
+                                                                    <a href="{% url 'blog_detail' q.id %}" class="thumb hover-effect" aria-label="Security In A Fragment World Of Workload For Your Business">
+                                                            <span class="fullimage cover" role="img" aria-label="Security In A Fragment World Of Workload For Your Business" style="background: url('{{q.image_url}}'); margin-top: 10px;"></span>
+                                                    </a>
+
+                    <div class="info gradient-effect">
+                                                    <time datetime="2020-11-01">{{q.blog_created}}</time>
+                                                <h4 class="title usmall"><a href="{% url 'blog_detail' q.id %}">{{q.title}}</a></h4>
+                    </div>
+
+                    <div class="clear"></div>
+                        {% endfor %}
+                </article>
+
+            </div><div id="categories-3" class="widget widget_categories"><h2 class="widget-title">Categories</h2>
+			<ul>
+                {% for w in category %}
+					<li class="cat-item cat-item-16"><a href="{% url 'blog_detail' w.id %}">{{w.category}}</a>
+                        {% endfor %}
+</li>
+
+			</ul>
+
+			</div><div id="tag_cloud-1" class="widget widget_tag_cloud"><h2 class="widget-title">Tags</h2><div class="tagcloud">
+                    {% for e in tags  %}
+                    <a href="https://themes.envytheme.com/vaximo/tag/blockchain/" class="tag-cloud-link tag-link-21 tag-link-position-1" style="font-size: 20.218181818182pt;" aria-label="Blockchain (5 items)">{{e.tags}}</a>
+                     {% endfor %}
+</div>	</div>
+</div><!-- #secondary -->
+
+			</div>
+		</div>
+	</div>
+    </div>
+        {% include 'project-compoments/footer.html' %}
+{% endblock %}

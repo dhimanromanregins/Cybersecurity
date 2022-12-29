@@ -1,0 +1,171 @@
+{% extends 'project-compoments/base.html' %}
+{% block content %}
+{% include 'project-compoments/header.html' %}
+{% load static %}
+<style>
+	.blog-sidebar .widget_search form button {
+    position: absolute;
+    right: 0;
+    outline: 0;
+    bottom: 0;
+    height: 50px;
+    width: 50px;
+    z-index: 1;
+    border: none;
+    color: #d80650;
+    background-color: transparent;
+}
+.pagination-area .page-numbers {
+    color: #d80650;
+    font-size: 30px;
+    width: 45px;
+    height: 45px;
+    margin: 0 3px;
+    display: inline-block;
+    background-color: #ffffff;
+    line-height: 48px;
+    -webkit-box-shadow: 0 2px 10px 0 #d8dde6;
+    box-shadow: 0 2px 10px 0 #d8dde6;
+    font-size: 14px;
+    font-weight: 700;
+}
+.blog-area .pagination-area .page-numbers {
+    background: transparent;
+    box-shadow: none;
+    font-size: 35px;
+    width: unset;
+    height: unset;
+}
+</style>
+    
+    <!-- Start Page Title Area -->
+            <div class="page-title-area page-title-bg1" style="background-image:url();">
+            <div class="container">
+                <div class="page-title-content">
+                    <h2>Blog</h2>
+                                                <ul>
+                                <li><a href="https://themes.envytheme.com/vaximo/">Home</a></li>
+                                <li class="active">Blog</li>
+                            </ul>                </div>
+            </div>
+        </div>
+        <!-- End Page Title Area -->
+
+    <!-- Start Blog Area -->
+    <div class="blog-area ptb-100 ">
+        <div class="container">
+            <div class="row">
+                <!-- Start Blog Content -->
+                <div class="col-lg-8 col-md-12">
+
+                    <div class="row">
+                        {% for i in blog %}
+<div class="col-lg-12 col-md-12 post-776 post type-post status-publish format-standard has-post-thumbnail hentry category-hacker">
+    <div class="single-blog-post">
+                    <div class="entry-thumbnail">
+                <a href="https://themes.envytheme.com/vaximo/security-in-a-fragment-world-of-workload-for-your-business-2/">
+                    <img src="{{i.image_url}}" alt="Security In A Fragment World Of Workload For Your Business">
+                </a>
+            </div>
+        
+        <div class="post-content">
+                            <ul class="entry-meta">
+                    <li>
+                        <a href="https://themes.envytheme.com/vaximo/author/vaximo/">
+                            {{i.name}}                       </a>
+                    </li>
+                    <li>
+                        {{i.blog_created}}                   </li>
+                    <li>
+                        No Comments                    </li>
+                </ul> 
+                                        <h3 class="title"><a href="https://themes.envytheme.com/vaximo/security-in-a-fragment-world-of-workload-for-your-business-2/">{{i.title}}</a></h3>
+            
+            <p>{{i.small_description}} </p>
+            
+                            <a href="{% url 'blog_detail' i.id %}" class="learn-more-btn">Read More <i class="bx bx-plus"></i></a>
+                    </div>
+    </div>
+</div>
+                        {% endfor %}
+ 
+
+                     </div>
+            
+                    <!-- Stat Pagination -->
+                            <div class="pagination-area">
+			<nav aria-label="navigation">
+{% if prev %}
+<a class="next page-numbers" href="?page={{prev}}"><i class="bx bx-chevrons-left"></i></a>
+                {% else %}
+                <a class="next page-numbers" href="#"><i class="bx bx-chevrons-left"></i></a>
+                {% endif %}
+
+                {% if nxt %}
+<a class="next page-numbers" href="?page={{nxt}}"><i class="bx bx-chevrons-right"></i></a>
+                {% else %}
+                <a class="next page-numbers" href="#"><i class="bx bx-chevrons-right"></i></a>
+                {% endif %}
+            </nav>
+		</div>
+                            <!-- End Pagination -->
+                </div>
+                <!-- End Blog Content -->
+                
+                                    <div class="col-lg-4 col-md-12">
+				<div id="secondary" class="title blog-sidebar widget-area">
+		
+		<div id="search-2" class="widget widget_search">
+<form action="/search/" method="GET">
+    <label>
+
+        <input type="text" class="search-field" name="search" id="search" placeholder="Search..." value="" required="">
+
+    </label>
+    <button type="submit" class="search-submit"><i class="bx bx-search-alt"></i></button>
+    </form>
+
+</div><div id="vaximo_posts_thumbs-2" class="widget widget_vaximo_posts_thumbs"><h2 class="widget-title">Recent posts</h2>
+                    <article class="item post-776 post type-post status-publish format-standard has-post-thumbnail hentry category-hacker">
+                        {% for a in side_data %}
+
+                                                                    <a href="{% url 'blog_detail' a.id %}" class="thumb hover-effect" aria-label="Security In A Fragment World Of Workload For Your Business">
+                                                            <span class="fullimage cover" role="img" aria-label="Security In A Fragment World Of Workload For Your Business" style="background: url('{{a.image_url}}'); margin-top: 10px;"></span>
+                                                    </a>
+                    
+                    <div class="info gradient-effect">
+
+                                                    <time datetime="2020-11-01">{{a.blog_created}}</time>
+                                                <h4 class="title usmall"><a href="{% url 'blog_detail' a.id %}">{{a.title}}</a></h4>
+                    </div>
+
+
+                    <div class="clear"></div>
+                        {% endfor %}
+                </article>
+
+
+            </div><div id="categories-3" class="widget widget_categories"><h2 class="widget-title">Categories</h2>
+			<ul>
+{% for j in category %}
+					<li class="cat-item cat-item-16"><a href="#">{{j.category}}</a>
+</li>
+                {% endfor %}
+
+
+			</ul>
+
+			</div><div id="tag_cloud-1" class="widget widget_tag_cloud"><h2 class="widget-title">Tags</h2><div class="tagcloud">
+                    {% for q in tags %}
+                    <a href="{% url 'blog_detail' q.id %}" class="tag-cloud-link tag-link-21 tag-link-position-1" style="font-size: 20.218181818182pt;" aria-label="Blockchain (5 items)">{{q.tags}}</a>
+                    {% endfor %}
+
+</div>
+</div>	</div>
+
+</div><!-- #secondary -->
+                            </div>   
+        </div>
+    </div>
+{% include 'project-compoments/footer.html' %}
+{% endblock %}

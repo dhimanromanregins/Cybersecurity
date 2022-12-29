@@ -1,0 +1,1432 @@
+{% extends 'project-compoments/base.html' %}
+{% load static %}
+{% block content %}
+
+	{% include 'project-compoments/header.html' %}
+
+            <div class="page-title-area" style="background-image:url(  );">
+            <div class="container">
+                <div class="page-title-content">
+                    <h2>{{product.product_name}}</h2>
+                                                <ul>
+                                <li><a href="https://themes.envytheme.com/vaximo/">Home</a></li>
+                                <li class="active">{{product.product_name}}</li>
+                            </ul>                </div>
+            </div>
+        </div>
+
+    <div class="products-area products_details ptb-100 ">
+        <div class="container">
+            <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+
+                    <div id="primary" class="content-area"><main id="main" class="site-main" role="main">
+
+                            <div class="woocommerce-notices-wrapper"></div>
+<div id="product-548" class="product type-product post-548 status-publish first instock product_cat-media has-post-thumbnail shipping-taxable purchasable product-type-simple">
+        <div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images" data-columns="4" style="opacity: 0; transition: opacity .25s ease-in-out;">
+	<figure class="woocommerce-product-gallery__wrapper">
+		<div data-thumb="{{product.image}}" data-thumb-alt="" class="woocommerce-product-gallery__image"><a href="{{product.image}}"><img width="530" height="530" src="{{product.image}}" class="wp-post-image" alt="" decoding="async" loading="lazy" title="product-4" data-caption="" data-src="{{product.image}}" data-large_image="{{product.image}}" data-large_image_width="600" data-large_image_height="600" srcset="{{product.image}} 530w, {{product.image}} 150w, {{product.image}} 300w, {{product.image}} 350w, {{product.image}} 100w, {{product.image}}" sizes="(max-width: 530px) 100vw, 530px" /></a></div>	</figure>
+</div>
+
+        <div class="summary entry-summary products-details">
+            <h3 class="product_title entry-title">{{product.product_name}}</h3><p class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>{{product.discounted_price}}</bdi></span></p>
+<div class="woocommerce-product-details__short-description">
+	<p>{{product.small_description}}<p>
+
+</div>
+
+
+	<form class="cart" action="https://themes.envytheme.com/vaximo/product/network-camera-720p-enigma-ds-i100-2-8-mm/" method="post" enctype='multipart/form-data'>
+
+			<div class="quantity">
+				<label class="screen-reader-text" for="quantity_6396b6a8e878d">Network Camera 720p Enigma DS-I100 quantity</label>
+		<input
+			type="number"
+			id="quantity_6396b6a8e878d"
+			class="input-text qty text"
+			step="1"
+			min="1"
+			max=""
+			name="quantity"
+			value="1"
+			title="Qty"
+			size="4"
+			placeholder=""
+			inputmode="numeric"
+			autocomplete="off"
+		/>
+			</div>
+
+        <button type="submit" name="add-to-cart" value="548" class="single_add_to_cart_button button alt">Add to cart</button>
+			</form>
+
+
+<div class="product_meta">
+
+
+
+	<span class="posted_in">Category: <a href="#" rel="tag">{{product.category}}</a></span>
+
+
+</div>
+
+	    </div>
+
+
+	<div class="woocommerce-tabs wc-tabs-wrapper products-details-tabs">
+		<ul class="tabs wc-tabs" role="tablist" id="tabs">
+							<li class="description_tab " id="tab-title-description" role="tab" aria-controls="tab-description">
+					<a href="#tab-description">Description</a>
+				</li>
+							<li class="reviews_tab " id="tab-title-reviews" role="tab" aria-controls="tab-reviews">
+					<a href="#tab-reviews">Reviews ({{length}})</a>
+				</li>
+					</ul>
+					<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab content" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
+
+  <h3>Description</h3>
+
+<p>{{product.description}}</p>
+
+			</div>
+					<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab content" id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
+				<div id="reviews" class="woocommerce-Reviews products-reviews">
+	<div id="comments">
+		<h3 class="woocommerce-Reviews-title">
+			Customer Reviews		</h3>
+
+
+
+{% for item in comments %}
+        <ol class="commentlist">
+				<li class="review even thread-even depth-1" id="li-comment-9">
+
+	<div id="comment-9" class="comment_container">
+
+		<img alt="" src="https://secure.gravatar.com/avatar/c9b2d09a2090db70f66851f698128f04?s=60&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/c9b2d09a2090db70f66851f698128f04?s=120&amp;d=mm&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async">
+		<div class="comment-text">
+
+
+
+	<p class="meta">
+		<em class="woocommerce-review__awaiting-approval">
+			{{item.name}}</em>
+	</p>
+
+<div class="description"><p>{{item.review}}</p>
+</div>
+		</div>
+	</div>
+</li><!-- #comment-## -->
+			</ol>
+        {% endfor %}
+
+
+
+
+			</div>
+
+			<div id="review_form_wrapper">
+
+			<div id="review_form">
+					<div id="respond" class="comment-respond">
+
+                        <form action="#" method="POST" id="commentform" class="comment-form" novalidate>
+                            {% csrf_token %}
+                            <p class="comment-notes">
+                            <span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p><div class="comment-form-rating">
+                        </div>
+                            <input type="hidden" name="product_id" value="{{product.id}}">
+                            <p class="comment-form-comment">
+                            <textarea id="comment" class="form-control" name="comment" placeholder="Write your review*"  cols="45" rows="4" required></textarea>
+                        </p>
+                            <p class="comment-form-author">
+                                <input id="author" name="author" type="text" class="form-control" value="" placeholder="Name*" size="30" required />
+                            </p>
+
+<p class="comment-form-email">
+    <input id="email" name="email" type="email" class="form-control" value="" placeholder="Email*" size="30" required />
+</p>
+<p class="comment-form-cookies-consent">
+    <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" />
+    <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label>
+</p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Submit" /> <input type='hidden' name='comment_post_ID' value='548' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>
+                        </form>
+
+                    </div><!-- #respond -->
+				</div>
+		</div>
+
+	<div class="clear"></div>
+</div>			</div>
+			</div>
+
+
+	<section class="related products">
+
+		<h2>Related products</h2>
+
+		<ul class="products columns-3">
+
+{% for k in related %}
+				<li class="product type-product post-546 status-publish last instock product_cat-media has-post-thumbnail shipping-taxable purchasable product-type-simple" style="margin-left:20px" >
+    <div class="single-products">
+        <a href="https://themes.envytheme.com/vaximo/product/1-3-mp-ip-camera-tr-d2111-3-6-mm-with-wi-fi/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+
+        <div class="products-image">
+                        <img class="" src="{{k.image}}" alt="product">
+            <ul class="product-btn-hover">
+                <li class="product-link">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#productsModalCenter531">
+                        <i class="fa fa-eye"></i>
+                    </a>
+                </li>
+                <li><a href="{% url 'single_product' k.id %}"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="products-content">
+            <h3><a href="{% url 'single_product' k.id %}">{{k.product.name}}</a></h3>
+
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>{{k.price}}</bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>{{k.discounted_price}}</bdi></span></ins></span>
+                        <ul>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+                <li><i class="fa fa-star-o"></i></li>
+            </ul>
+                        <a href="?add-to-cart=531" data-quantity="1" class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart add-to-cart-btn" data-product_id="531" data-product_sku="" aria-label="Add &ldquo;1.3 Mp IP-Camera TR-D2111 (3.6 Mm)&rdquo; to your cart" rel="nofollow">Add to cart</a>        </div>
+
+	<span class="sale-btn">{{k.tags}}</span>
+        </a>    </div>
+</li>
+            {% endfor %}
+
+
+
+
+
+		</ul>
+<!-- Start Products Modal -->
+
+<!-- End Produts Modal -->
+	</section>
+
+
+
+<!-- Start Products Modal -->
+<ul class="products columns-3">
+
+                                            <div class="modal productsQuickView fade" id="productsModalCenter548" tabindex="-1" role="dialog" aria-labelledby="productsModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="products-image">
+                                        <img width="350" height="350" src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1-350x350.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1-350x350.jpg 350w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1-150x150.jpg 150w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1-300x300.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1-530x530.jpg 530w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1-100x100.jpg 100w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1.jpg 600w" sizes="(max-width: 350px) 100vw, 350px" />                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="products-content">
+                                            <h3>Network Camera 720p Enigma DS-I100</h3>
+
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>70.00</bdi></span></span>
+                                                                                        <div class="woocommerce-product-details__short-description">
+	<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+</div>
+
+
+
+	<form class="cart" action="https://themes.envytheme.com/vaximo/product/network-camera-720p-enigma-ds-i100-2-8-mm/" method="post" enctype='multipart/form-data'>
+
+			<div class="quantity">
+				<label class="screen-reader-text" for="quantity_6396b6a8f0c9b">Network Camera 720p Enigma DS-I100 quantity</label>
+		<input
+			type="number"
+			id="quantity_6396b6a8f0c9b"
+			class="input-text qty text"
+			step="1"
+			min="1"
+			max=""
+			name="quantity"
+			value="1"
+			title="Qty"
+			size="4"
+			placeholder=""
+			inputmode="numeric"
+			autocomplete="off"
+		/>
+			</div>
+
+        <button type="submit" name="add-to-cart" value="548" class="single_add_to_cart_button button alt">Add to cart</button>
+			</form>
+
+
+
+                                            <div class="product-meta">
+                                                <div class="product_meta">
+
+
+
+	<span class="posted_in">Category: <a href="https://themes.envytheme.com/vaximo/product-category/media/" rel="tag">Media</a></span>
+
+
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                            <div class="modal productsQuickView fade" id="productsModalCenter547" tabindex="-1" role="dialog" aria-labelledby="productsModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="products-image">
+                                        <img width="350" height="350" src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1-350x350.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1-350x350.jpg 350w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1-150x150.jpg 150w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1-300x300.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1-530x530.jpg 530w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1-100x100.jpg 100w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1.jpg 600w" sizes="(max-width: 350px) 100vw, 350px" />                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="products-content">
+                                            <h3>Camera Battery TR-D233 (3.6 Mm)</h3>
+
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>70.00</bdi></span></span>
+                                                                                        <div class="woocommerce-product-details__short-description">
+	<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+</div>
+
+
+
+	<form class="cart" action="https://themes.envytheme.com/vaximo/product/camera-battery-tr-d233-3-6-mm/" method="post" enctype='multipart/form-data'>
+
+			<div class="quantity">
+				<label class="screen-reader-text" for="quantity_6396b6a8f157e">Camera Battery TR-D233 (3.6 Mm) quantity</label>
+		<input
+			type="number"
+			id="quantity_6396b6a8f157e"
+			class="input-text qty text"
+			step="1"
+			min="1"
+			max=""
+			name="quantity"
+			value="1"
+			title="Qty"
+			size="4"
+			placeholder=""
+			inputmode="numeric"
+			autocomplete="off"
+		/>
+			</div>
+
+        <button type="submit" name="add-to-cart" value="547" class="single_add_to_cart_button button alt">Add to cart</button>
+			</form>
+
+
+
+                                            <div class="product-meta">
+                                                <div class="product_meta">
+
+
+
+	<span class="posted_in">Category: <a href="https://themes.envytheme.com/vaximo/product-category/media/" rel="tag">Media</a></span>
+
+
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                            <div class="modal productsQuickView fade" id="productsModalCenter546" tabindex="-1" role="dialog" aria-labelledby="productsModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="products-image">
+                                        <img width="350" height="350" src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1-350x350.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1-350x350.jpg 350w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1-150x150.jpg 150w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1-300x300.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1-530x530.jpg 530w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1-100x100.jpg 100w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1.jpg 600w" sizes="(max-width: 350px) 100vw, 350px" />                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="products-content">
+                                            <h3>3.2 Mp IP-Camera TR-E800 (3.6 Mm)</h3>
+
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>60.50</bdi></span></span>
+                                                                                        <div class="woocommerce-product-details__short-description">
+	<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+</div>
+
+
+
+	<form class="cart" action="https://themes.envytheme.com/vaximo/product/3-2-mp-ip-camera-tr-e800-3-6-mm-with-wi-fi/" method="post" enctype='multipart/form-data'>
+
+			<div class="quantity">
+				<label class="screen-reader-text" for="quantity_6396b6a8f1e41">3.2 Mp IP-Camera TR-E800 (3.6 Mm) quantity</label>
+		<input
+			type="number"
+			id="quantity_6396b6a8f1e41"
+			class="input-text qty text"
+			step="1"
+			min="1"
+			max=""
+			name="quantity"
+			value="1"
+			title="Qty"
+			size="4"
+			placeholder=""
+			inputmode="numeric"
+			autocomplete="off"
+		/>
+			</div>
+
+        <button type="submit" name="add-to-cart" value="546" class="single_add_to_cart_button button alt">Add to cart</button>
+			</form>
+
+
+
+                                            <div class="product-meta">
+                                                <div class="product_meta">
+
+
+
+	<span class="posted_in">Category: <a href="https://themes.envytheme.com/vaximo/product-category/media/" rel="tag">Media</a></span>
+
+
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                            <div class="modal productsQuickView fade" id="productsModalCenter545" tabindex="-1" role="dialog" aria-labelledby="productsModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="products-image">
+                                        <img width="350" height="350" src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1-350x350.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1-350x350.jpg 350w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1-150x150.jpg 150w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1-300x300.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1-530x530.jpg 530w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1-100x100.jpg 100w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1.jpg 600w" sizes="(max-width: 350px) 100vw, 350px" />                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="products-content">
+                                            <h3>Omega DHL22 F600 Monitor LCD 21.5″</h3>
+
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>80.50</bdi></span></span>
+                                                                                        <div class="woocommerce-product-details__short-description">
+	<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+</div>
+
+
+
+	<form class="cart" action="https://themes.envytheme.com/vaximo/product/omega-dhl22-f600-monitor-lcd-21-5%e2%80%b3/" method="post" enctype='multipart/form-data'>
+
+			<div class="quantity">
+				<label class="screen-reader-text" for="quantity_6396b6a8f2947">Omega DHL22 F600 Monitor LCD 21.5″ quantity</label>
+		<input
+			type="number"
+			id="quantity_6396b6a8f2947"
+			class="input-text qty text"
+			step="1"
+			min="1"
+			max=""
+			name="quantity"
+			value="1"
+			title="Qty"
+			size="4"
+			placeholder=""
+			inputmode="numeric"
+			autocomplete="off"
+		/>
+			</div>
+
+        <button type="submit" name="add-to-cart" value="545" class="single_add_to_cart_button button alt">Add to cart</button>
+			</form>
+
+
+
+                                            <div class="product-meta">
+                                                <div class="product_meta">
+
+
+
+	<span class="posted_in">Category: <a href="https://themes.envytheme.com/vaximo/product-category/media/" rel="tag">Media</a></span>
+
+
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                            <div class="modal productsQuickView fade" id="productsModalCenter544" tabindex="-1" role="dialog" aria-labelledby="productsModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="products-image">
+                                        <img width="350" height="350" src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1-350x350.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1-350x350.jpg 350w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1-150x150.jpg 150w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1-300x300.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1-530x530.jpg 530w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1-100x100.jpg 100w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1.jpg 600w" sizes="(max-width: 350px) 100vw, 350px" />                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="products-content">
+                                            <h3>2.8 Mp IP-Camera TR-D234 (3.6 Mm)</h3>
+
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>55.50</bdi></span></span>
+                                                                                        <div class="woocommerce-product-details__short-description">
+	<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+</div>
+
+
+
+	<form class="cart" action="https://themes.envytheme.com/vaximo/product/2-8-mp-ip-camera-tr-d234-3-6-mm/" method="post" enctype='multipart/form-data'>
+
+			<div class="quantity">
+				<label class="screen-reader-text" for="quantity_6396b6a8f3354">2.8 Mp IP-Camera TR-D234 (3.6 Mm) quantity</label>
+		<input
+			type="number"
+			id="quantity_6396b6a8f3354"
+			class="input-text qty text"
+			step="1"
+			min="1"
+			max=""
+			name="quantity"
+			value="1"
+			title="Qty"
+			size="4"
+			placeholder=""
+			inputmode="numeric"
+			autocomplete="off"
+		/>
+			</div>
+
+        <button type="submit" name="add-to-cart" value="544" class="single_add_to_cart_button button alt">Add to cart</button>
+			</form>
+
+
+
+                                            <div class="product-meta">
+                                                <div class="product_meta">
+
+
+
+	<span class="posted_in">Category: <a href="https://themes.envytheme.com/vaximo/product-category/media/" rel="tag">Media</a></span>
+
+
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                            <div class="modal productsQuickView fade" id="productsModalCenter531" tabindex="-1" role="dialog" aria-labelledby="productsModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="products-image">
+                                        <img width="350" height="350" src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1-350x350.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1-350x350.jpg 350w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1-150x150.jpg 150w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1-300x300.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1-530x530.jpg 530w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1-100x100.jpg 100w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1.jpg 600w" sizes="(max-width: 350px) 100vw, 350px" />                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="products-content">
+                                            <h3>1.3 Mp IP-Camera TR-D2111 (3.6 Mm)</h3>
+
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>20.00</bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>15.00</bdi></span></ins></span>
+                                                                                        <div class="woocommerce-product-details__short-description">
+	<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+</div>
+
+
+
+	<form class="cart" action="https://themes.envytheme.com/vaximo/product/1-3-mp-ip-camera-tr-d2111-3-6-mm-with-wi-fi/" method="post" enctype='multipart/form-data'>
+
+			<div class="quantity">
+				<label class="screen-reader-text" for="quantity_6396b6a8f3ac6">1.3 Mp IP-Camera TR-D2111 (3.6 Mm) quantity</label>
+		<input
+			type="number"
+			id="quantity_6396b6a8f3ac6"
+			class="input-text qty text"
+			step="1"
+			min="1"
+			max=""
+			name="quantity"
+			value="1"
+			title="Qty"
+			size="4"
+			placeholder=""
+			inputmode="numeric"
+			autocomplete="off"
+		/>
+			</div>
+
+        <button type="submit" name="add-to-cart" value="531" class="single_add_to_cart_button button alt">Add to cart</button>
+			</form>
+
+
+
+                                            <div class="product-meta">
+                                                <div class="product_meta">
+
+
+
+	<span class="posted_in">Category: <a href="https://themes.envytheme.com/vaximo/product-category/media/" rel="tag">Media</a></span>
+
+
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                                            <div class="modal productsQuickView fade" id="productsModalCenter548" tabindex="-1" role="dialog" aria-labelledby="productsModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="products-image">
+                                        <img width="350" height="350" src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1-350x350.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1-350x350.jpg 350w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1-150x150.jpg 150w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1-300x300.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1-530x530.jpg 530w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1-100x100.jpg 100w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1.jpg 600w" sizes="(max-width: 350px) 100vw, 350px" />                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="products-content">
+                                            <h3>Network Camera 720p Enigma DS-I100</h3>
+
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>70.00</bdi></span></span>
+                                                                                        <div class="woocommerce-product-details__short-description">
+	<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+</div>
+
+
+
+	<form class="cart" action="https://themes.envytheme.com/vaximo/product/network-camera-720p-enigma-ds-i100-2-8-mm/" method="post" enctype='multipart/form-data'>
+
+			<div class="quantity">
+				<label class="screen-reader-text" for="quantity_6396b6a900608">Network Camera 720p Enigma DS-I100 quantity</label>
+		<input
+			type="number"
+			id="quantity_6396b6a900608"
+			class="input-text qty text"
+			step="1"
+			min="1"
+			max=""
+			name="quantity"
+			value="1"
+			title="Qty"
+			size="4"
+			placeholder=""
+			inputmode="numeric"
+			autocomplete="off"
+		/>
+			</div>
+
+        <button type="submit" name="add-to-cart" value="548" class="single_add_to_cart_button button alt">Add to cart</button>
+			</form>
+
+
+
+                                            <div class="product-meta">
+                                                <div class="product_meta">
+
+
+
+	<span class="posted_in">Category: <a href="https://themes.envytheme.com/vaximo/product-category/media/" rel="tag">Media</a></span>
+
+
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                            <div class="modal productsQuickView fade" id="productsModalCenter547" tabindex="-1" role="dialog" aria-labelledby="productsModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="products-image">
+                                        <img width="350" height="350" src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1-350x350.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1-350x350.jpg 350w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1-150x150.jpg 150w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1-300x300.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1-530x530.jpg 530w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1-100x100.jpg 100w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1.jpg 600w" sizes="(max-width: 350px) 100vw, 350px" />                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="products-content">
+                                            <h3>Camera Battery TR-D233 (3.6 Mm)</h3>
+
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>70.00</bdi></span></span>
+                                                                                        <div class="woocommerce-product-details__short-description">
+	<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+</div>
+
+
+
+	<form class="cart" action="https://themes.envytheme.com/vaximo/product/camera-battery-tr-d233-3-6-mm/" method="post" enctype='multipart/form-data'>
+
+			<div class="quantity">
+				<label class="screen-reader-text" for="quantity_6396b6a900d73">Camera Battery TR-D233 (3.6 Mm) quantity</label>
+		<input
+			type="number"
+			id="quantity_6396b6a900d73"
+			class="input-text qty text"
+			step="1"
+			min="1"
+			max=""
+			name="quantity"
+			value="1"
+			title="Qty"
+			size="4"
+			placeholder=""
+			inputmode="numeric"
+			autocomplete="off"
+		/>
+			</div>
+
+        <button type="submit" name="add-to-cart" value="547" class="single_add_to_cart_button button alt">Add to cart</button>
+			</form>
+
+
+
+                                            <div class="product-meta">
+                                                <div class="product_meta">
+
+
+
+	<span class="posted_in">Category: <a href="https://themes.envytheme.com/vaximo/product-category/media/" rel="tag">Media</a></span>
+
+
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                            <div class="modal productsQuickView fade" id="productsModalCenter546" tabindex="-1" role="dialog" aria-labelledby="productsModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="products-image">
+                                        <img width="350" height="350" src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1-350x350.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1-350x350.jpg 350w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1-150x150.jpg 150w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1-300x300.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1-530x530.jpg 530w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1-100x100.jpg 100w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1.jpg 600w" sizes="(max-width: 350px) 100vw, 350px" />                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="products-content">
+                                            <h3>3.2 Mp IP-Camera TR-E800 (3.6 Mm)</h3>
+
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>60.50</bdi></span></span>
+                                                                                        <div class="woocommerce-product-details__short-description">
+	<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+</div>
+
+
+
+	<form class="cart" action="https://themes.envytheme.com/vaximo/product/3-2-mp-ip-camera-tr-e800-3-6-mm-with-wi-fi/" method="post" enctype='multipart/form-data'>
+
+			<div class="quantity">
+				<label class="screen-reader-text" for="quantity_6396b6a9014d4">3.2 Mp IP-Camera TR-E800 (3.6 Mm) quantity</label>
+		<input
+			type="number"
+			id="quantity_6396b6a9014d4"
+			class="input-text qty text"
+			step="1"
+			min="1"
+			max=""
+			name="quantity"
+			value="1"
+			title="Qty"
+			size="4"
+			placeholder=""
+			inputmode="numeric"
+			autocomplete="off"
+		/>
+			</div>
+
+        <button type="submit" name="add-to-cart" value="546" class="single_add_to_cart_button button alt">Add to cart</button>
+			</form>
+
+
+
+                                            <div class="product-meta">
+                                                <div class="product_meta">
+
+
+
+	<span class="posted_in">Category: <a href="https://themes.envytheme.com/vaximo/product-category/media/" rel="tag">Media</a></span>
+
+
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                            <div class="modal productsQuickView fade" id="productsModalCenter545" tabindex="-1" role="dialog" aria-labelledby="productsModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="products-image">
+                                        <img width="350" height="350" src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1-350x350.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1-350x350.jpg 350w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1-150x150.jpg 150w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1-300x300.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1-530x530.jpg 530w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1-100x100.jpg 100w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1.jpg 600w" sizes="(max-width: 350px) 100vw, 350px" />                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="products-content">
+                                            <h3>Omega DHL22 F600 Monitor LCD 21.5″</h3>
+
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>80.50</bdi></span></span>
+                                                                                        <div class="woocommerce-product-details__short-description">
+	<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+</div>
+
+
+
+	<form class="cart" action="https://themes.envytheme.com/vaximo/product/omega-dhl22-f600-monitor-lcd-21-5%e2%80%b3/" method="post" enctype='multipart/form-data'>
+
+			<div class="quantity">
+				<label class="screen-reader-text" for="quantity_6396b6a901d2a">Omega DHL22 F600 Monitor LCD 21.5″ quantity</label>
+		<input
+			type="number"
+			id="quantity_6396b6a901d2a"
+			class="input-text qty text"
+			step="1"
+			min="1"
+			max=""
+			name="quantity"
+			value="1"
+			title="Qty"
+			size="4"
+			placeholder=""
+			inputmode="numeric"
+			autocomplete="off"
+		/>
+			</div>
+
+        <button type="submit" name="add-to-cart" value="545" class="single_add_to_cart_button button alt">Add to cart</button>
+			</form>
+
+
+
+                                            <div class="product-meta">
+                                                <div class="product_meta">
+
+
+
+	<span class="posted_in">Category: <a href="https://themes.envytheme.com/vaximo/product-category/media/" rel="tag">Media</a></span>
+
+
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                            <div class="modal productsQuickView fade" id="productsModalCenter544" tabindex="-1" role="dialog" aria-labelledby="productsModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="products-image">
+                                        <img width="350" height="350" src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1-350x350.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1-350x350.jpg 350w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1-150x150.jpg 150w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1-300x300.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1-530x530.jpg 530w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1-100x100.jpg 100w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1.jpg 600w" sizes="(max-width: 350px) 100vw, 350px" />                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="products-content">
+                                            <h3>2.8 Mp IP-Camera TR-D234 (3.6 Mm)</h3>
+
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>55.50</bdi></span></span>
+                                                                                        <div class="woocommerce-product-details__short-description">
+	<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+</div>
+
+
+
+	<form class="cart" action="https://themes.envytheme.com/vaximo/product/2-8-mp-ip-camera-tr-d234-3-6-mm/" method="post" enctype='multipart/form-data'>
+
+			<div class="quantity">
+				<label class="screen-reader-text" for="quantity_6396b6a902432">2.8 Mp IP-Camera TR-D234 (3.6 Mm) quantity</label>
+		<input
+			type="number"
+			id="quantity_6396b6a902432"
+			class="input-text qty text"
+			step="1"
+			min="1"
+			max=""
+			name="quantity"
+			value="1"
+			title="Qty"
+			size="4"
+			placeholder=""
+			inputmode="numeric"
+			autocomplete="off"
+		/>
+			</div>
+
+        <button type="submit" name="add-to-cart" value="544" class="single_add_to_cart_button button alt">Add to cart</button>
+			</form>
+
+
+
+                                            <div class="product-meta">
+                                                <div class="product_meta">
+
+
+
+	<span class="posted_in">Category: <a href="https://themes.envytheme.com/vaximo/product-category/media/" rel="tag">Media</a></span>
+
+
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                            <div class="modal productsQuickView fade" id="productsModalCenter531" tabindex="-1" role="dialog" aria-labelledby="productsModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="products-image">
+                                        <img width="350" height="350" src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1-350x350.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1-350x350.jpg 350w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1-150x150.jpg 150w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1-300x300.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1-530x530.jpg 530w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1-100x100.jpg 100w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1.jpg 600w" sizes="(max-width: 350px) 100vw, 350px" />                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="products-content">
+                                            <h3>1.3 Mp IP-Camera TR-D2111 (3.6 Mm)</h3>
+
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>20.00</bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>15.00</bdi></span></ins></span>
+                                                                                        <div class="woocommerce-product-details__short-description">
+	<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+</div>
+
+
+
+	<form class="cart" action="https://themes.envytheme.com/vaximo/product/1-3-mp-ip-camera-tr-d2111-3-6-mm-with-wi-fi/" method="post" enctype='multipart/form-data'>
+
+			<div class="quantity">
+				<label class="screen-reader-text" for="quantity_6396b6a902b77">1.3 Mp IP-Camera TR-D2111 (3.6 Mm) quantity</label>
+		<input
+			type="number"
+			id="quantity_6396b6a902b77"
+			class="input-text qty text"
+			step="1"
+			min="1"
+			max=""
+			name="quantity"
+			value="1"
+			title="Qty"
+			size="4"
+			placeholder=""
+			inputmode="numeric"
+			autocomplete="off"
+		/>
+			</div>
+
+        <button type="submit" name="add-to-cart" value="531" class="single_add_to_cart_button button alt">Add to cart</button>
+			</form>
+
+
+
+                                            <div class="product-meta">
+                                                <div class="product_meta">
+
+
+
+	<span class="posted_in">Category: <a href="https://themes.envytheme.com/vaximo/product-category/media/" rel="tag">Media</a></span>
+
+
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                                            <div class="modal productsQuickView fade" id="productsModalCenter548" tabindex="-1" role="dialog" aria-labelledby="productsModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="products-image">
+                                        <img width="350" height="350" src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1-350x350.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1-350x350.jpg 350w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1-150x150.jpg 150w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1-300x300.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1-530x530.jpg 530w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1-100x100.jpg 100w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-4-1-1.jpg 600w" sizes="(max-width: 350px) 100vw, 350px" />                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="products-content">
+                                            <h3>Network Camera 720p Enigma DS-I100</h3>
+
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>70.00</bdi></span></span>
+                                                                                        <div class="woocommerce-product-details__short-description">
+	<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+</div>
+
+
+
+	<form class="cart" action="https://themes.envytheme.com/vaximo/product/network-camera-720p-enigma-ds-i100-2-8-mm/" method="post" enctype='multipart/form-data'>
+
+			<div class="quantity">
+				<label class="screen-reader-text" for="quantity_6396b6a9038f3">Network Camera 720p Enigma DS-I100 quantity</label>
+		<input
+			type="number"
+			id="quantity_6396b6a9038f3"
+			class="input-text qty text"
+			step="1"
+			min="1"
+			max=""
+			name="quantity"
+			value="1"
+			title="Qty"
+			size="4"
+			placeholder=""
+			inputmode="numeric"
+			autocomplete="off"
+		/>
+			</div>
+
+        <button type="submit" name="add-to-cart" value="548" class="single_add_to_cart_button button alt">Add to cart</button>
+			</form>
+
+
+
+                                            <div class="product-meta">
+                                                <div class="product_meta">
+
+
+
+	<span class="posted_in">Category: <a href="https://themes.envytheme.com/vaximo/product-category/media/" rel="tag">Media</a></span>
+
+
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                            <div class="modal productsQuickView fade" id="productsModalCenter547" tabindex="-1" role="dialog" aria-labelledby="productsModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="products-image">
+                                        <img width="350" height="350" src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1-350x350.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1-350x350.jpg 350w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1-150x150.jpg 150w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1-300x300.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1-530x530.jpg 530w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1-100x100.jpg 100w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-5-1-1.jpg 600w" sizes="(max-width: 350px) 100vw, 350px" />                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="products-content">
+                                            <h3>Camera Battery TR-D233 (3.6 Mm)</h3>
+
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>70.00</bdi></span></span>
+                                                                                        <div class="woocommerce-product-details__short-description">
+	<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+</div>
+
+
+
+	<form class="cart" action="https://themes.envytheme.com/vaximo/product/camera-battery-tr-d233-3-6-mm/" method="post" enctype='multipart/form-data'>
+
+			<div class="quantity">
+				<label class="screen-reader-text" for="quantity_6396b6a903fe2">Camera Battery TR-D233 (3.6 Mm) quantity</label>
+		<input
+			type="number"
+			id="quantity_6396b6a903fe2"
+			class="input-text qty text"
+			step="1"
+			min="1"
+			max=""
+			name="quantity"
+			value="1"
+			title="Qty"
+			size="4"
+			placeholder=""
+			inputmode="numeric"
+			autocomplete="off"
+		/>
+			</div>
+
+        <button type="submit" name="add-to-cart" value="547" class="single_add_to_cart_button button alt">Add to cart</button>
+			</form>
+
+
+
+                                            <div class="product-meta">
+                                                <div class="product_meta">
+
+
+
+	<span class="posted_in">Category: <a href="https://themes.envytheme.com/vaximo/product-category/media/" rel="tag">Media</a></span>
+
+
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                            <div class="modal productsQuickView fade" id="productsModalCenter546" tabindex="-1" role="dialog" aria-labelledby="productsModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="products-image">
+                                        <img width="350" height="350" src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1-350x350.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1-350x350.jpg 350w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1-150x150.jpg 150w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1-300x300.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1-530x530.jpg 530w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1-100x100.jpg 100w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-6-1-1.jpg 600w" sizes="(max-width: 350px) 100vw, 350px" />                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="products-content">
+                                            <h3>3.2 Mp IP-Camera TR-E800 (3.6 Mm)</h3>
+
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>60.50</bdi></span></span>
+                                                                                        <div class="woocommerce-product-details__short-description">
+	<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+</div>
+
+
+
+	<form class="cart" action="https://themes.envytheme.com/vaximo/product/3-2-mp-ip-camera-tr-e800-3-6-mm-with-wi-fi/" method="post" enctype='multipart/form-data'>
+
+			<div class="quantity">
+				<label class="screen-reader-text" for="quantity_6396b6a904752">3.2 Mp IP-Camera TR-E800 (3.6 Mm) quantity</label>
+		<input
+			type="number"
+			id="quantity_6396b6a904752"
+			class="input-text qty text"
+			step="1"
+			min="1"
+			max=""
+			name="quantity"
+			value="1"
+			title="Qty"
+			size="4"
+			placeholder=""
+			inputmode="numeric"
+			autocomplete="off"
+		/>
+			</div>
+
+        <button type="submit" name="add-to-cart" value="546" class="single_add_to_cart_button button alt">Add to cart</button>
+			</form>
+
+
+
+                                            <div class="product-meta">
+                                                <div class="product_meta">
+
+
+
+	<span class="posted_in">Category: <a href="https://themes.envytheme.com/vaximo/product-category/media/" rel="tag">Media</a></span>
+
+
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                            <div class="modal productsQuickView fade" id="productsModalCenter545" tabindex="-1" role="dialog" aria-labelledby="productsModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="products-image">
+                                        <img width="350" height="350" src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1-350x350.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1-350x350.jpg 350w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1-150x150.jpg 150w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1-300x300.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1-530x530.jpg 530w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1-100x100.jpg 100w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-1-1-1.jpg 600w" sizes="(max-width: 350px) 100vw, 350px" />                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="products-content">
+                                            <h3>Omega DHL22 F600 Monitor LCD 21.5″</h3>
+
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>80.50</bdi></span></span>
+                                                                                        <div class="woocommerce-product-details__short-description">
+	<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+</div>
+
+
+
+	<form class="cart" action="https://themes.envytheme.com/vaximo/product/omega-dhl22-f600-monitor-lcd-21-5%e2%80%b3/" method="post" enctype='multipart/form-data'>
+
+			<div class="quantity">
+				<label class="screen-reader-text" for="quantity_6396b6a904f49">Omega DHL22 F600 Monitor LCD 21.5″ quantity</label>
+		<input
+			type="number"
+			id="quantity_6396b6a904f49"
+			class="input-text qty text"
+			step="1"
+			min="1"
+			max=""
+			name="quantity"
+			value="1"
+			title="Qty"
+			size="4"
+			placeholder=""
+			inputmode="numeric"
+			autocomplete="off"
+		/>
+			</div>
+
+        <button type="submit" name="add-to-cart" value="545" class="single_add_to_cart_button button alt">Add to cart</button>
+			</form>
+
+
+
+                                            <div class="product-meta">
+                                                <div class="product_meta">
+
+
+
+	<span class="posted_in">Category: <a href="https://themes.envytheme.com/vaximo/product-category/media/" rel="tag">Media</a></span>
+
+
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                            <div class="modal productsQuickView fade" id="productsModalCenter544" tabindex="-1" role="dialog" aria-labelledby="productsModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="products-image">
+                                        <img width="350" height="350" src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1-350x350.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1-350x350.jpg 350w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1-150x150.jpg 150w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1-300x300.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1-530x530.jpg 530w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1-100x100.jpg 100w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-3-1-1.jpg 600w" sizes="(max-width: 350px) 100vw, 350px" />                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="products-content">
+                                            <h3>2.8 Mp IP-Camera TR-D234 (3.6 Mm)</h3>
+
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>55.50</bdi></span></span>
+                                                                                        <div class="woocommerce-product-details__short-description">
+	<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+</div>
+
+
+
+	<form class="cart" action="https://themes.envytheme.com/vaximo/product/2-8-mp-ip-camera-tr-d234-3-6-mm/" method="post" enctype='multipart/form-data'>
+
+			<div class="quantity">
+				<label class="screen-reader-text" for="quantity_6396b6a90560e">2.8 Mp IP-Camera TR-D234 (3.6 Mm) quantity</label>
+		<input
+			type="number"
+			id="quantity_6396b6a90560e"
+			class="input-text qty text"
+			step="1"
+			min="1"
+			max=""
+			name="quantity"
+			value="1"
+			title="Qty"
+			size="4"
+			placeholder=""
+			inputmode="numeric"
+			autocomplete="off"
+		/>
+			</div>
+
+        <button type="submit" name="add-to-cart" value="544" class="single_add_to_cart_button button alt">Add to cart</button>
+			</form>
+
+
+
+                                            <div class="product-meta">
+                                                <div class="product_meta">
+
+
+
+	<span class="posted_in">Category: <a href="https://themes.envytheme.com/vaximo/product-category/media/" rel="tag">Media</a></span>
+
+
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                            <div class="modal productsQuickView fade" id="productsModalCenter531" tabindex="-1" role="dialog" aria-labelledby="productsModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="products-image">
+                                        <img width="350" height="350" src="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1-350x350.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1-350x350.jpg 350w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1-150x150.jpg 150w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1-300x300.jpg 300w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1-530x530.jpg 530w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1-100x100.jpg 100w, https://themes.envytheme.com/vaximo/wp-content/uploads/2020/08/product-2-1-1.jpg 600w" sizes="(max-width: 350px) 100vw, 350px" />                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="products-content">
+                                            <h3>1.3 Mp IP-Camera TR-D2111 (3.6 Mm)</h3>
+
+	<span class="price"><del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>20.00</bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&pound;</span>15.00</bdi></span></ins></span>
+                                                                                        <div class="woocommerce-product-details__short-description">
+	<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly.</p>
+</div>
+
+
+
+	<form class="cart" action="https://themes.envytheme.com/vaximo/product/1-3-mp-ip-camera-tr-d2111-3-6-mm-with-wi-fi/" method="post" enctype='multipart/form-data'>
+
+			<div class="quantity">
+				<label class="screen-reader-text" for="quantity_6396b6a905d68">1.3 Mp IP-Camera TR-D2111 (3.6 Mm) quantity</label>
+		<input
+			type="number"
+			id="quantity_6396b6a905d68"
+			class="input-text qty text"
+			step="1"
+			min="1"
+			max=""
+			name="quantity"
+			value="1"
+			title="Qty"
+			size="4"
+			placeholder=""
+			inputmode="numeric"
+			autocomplete="off"
+		/>
+			</div>
+
+        <button type="submit" name="add-to-cart" value="531" class="single_add_to_cart_button button alt">Add to cart</button>
+			</form>
+
+
+
+                                            <div class="product-meta">
+                                                <div class="product_meta">
+
+
+
+	<span class="posted_in">Category: <a href="https://themes.envytheme.com/vaximo/product-category/media/" rel="tag">Media</a></span>
+
+
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+        </ul>
+<!-- Start Products Modal -->
+
+<!-- End Produts Modal --></div>
+
+
+
+                    </main></div>                </div>
+                            </div>
+        </div>
+    </div>
+    	<!-- Footer -->
+	<!-- Start Footer Area -->
+   {% include 'project-compoments/footer.html' %}
+{% endblock %}

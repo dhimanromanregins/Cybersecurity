@@ -1,0 +1,106 @@
+{% extends 'project-compoments/base.html' %}
+{% load static %}
+{% load cart %}
+{% block content %}
+
+<body class="page-template-default page page-id-9 theme-vaximo woocommerce-cart woocommerce-page woocommerce-no-js elementor-default elementor-kit-12">
+{% include 'project-compoments/header.html' %}
+    	<!-- Start Page Title Area -->
+		<div class="page-title-area page-title-bg1" style="background-image:url();">
+			<div class="container">
+				<div class="page-title-content">
+					<h2>Cart</h2>
+
+												<ul>
+								<li><a href="https://themes.envytheme.com/vaximo/">Home</a></li>
+								<li class="active">Cart</li>
+							</ul>				</div>
+			</div>
+		</div>
+	<!-- End Page Title Area -->
+
+
+	<div class="page-main-content">		<div class="page-area ">
+			<div class="container">
+<article id="post-9" class="post-9 page type-page status-publish hentry">
+	<div class="entry-content">
+		<div class="woocommerce"><div class="woocommerce-notices-wrapper"></div><div class="cart-area">
+    <form class="woocommerce-cart-form" action="https://themes.envytheme.com/vaximo/cart/" method="post">
+        <div class="cart-table table-responsive">
+
+            <table class="shop_table cart woocommerce-cart-form__contents table table-bordered" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th class="product-img">Product</th>
+                        <th class="product-name">Name</th>
+                        <th class="product-price">Unit Price</th>
+                        <th class="product-subtotal">Subtotal</th>
+                        <th class="product-remove">&nbsp;</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+{% for i in cart_data %}
+<form action="{% url 'cart' %}" method="POST">
+                                                <tr class="woocommerce-cart-form__cart-item cart_item">
+
+
+
+                                <td class="product-thumbnail">
+                                <a href="https://themes.envytheme.com/vaximo/product/network-camera-720p-enigma-ds-i100-2-8-mm/"><img width="350" height="350" src="{{i.image}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="{{i.image}} 350w, {{i.image}} 150w, {{i.image}} 300w, {{i.image}} 530w, {{i.image}} 100w, {{i.image}} 600w" sizes="(max-width: 350px) 100vw, 350px"></a>                                </td>
+
+                                <td class="product-name" data-title="Product">
+                                <a href="https://themes.envytheme.com/vaximo/product/network-camera-720p-enigma-ds-i100-2-8-mm/">{{i.product_name}}</a></td>
+
+                                <td class="product-price" data-title="Price">
+                                    <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">£</span>{{i.discounted_price}}</bdi></span></td>
+
+                                <td class="product-subtotal" data-title="Total">
+                                    <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">£</span>{{i.discounted_price}}</bdi></span></td>
+
+                                <td class="product-remove">
+                                    <a href="{% url 'del_cart_product' %}" class="remove" aria-label="Remove this item" data-product_id="548" data-product_sku=""><i class="fa fa-trash"></i></a>                                </td>
+                            </tr>
+</form>
+{% endfor %}</tbody>
+            </table>
+                    </div>
+    </form>
+    <div class="cart-collaterals">
+        <div class="cart_totals cart-totals ">
+	<h3>Cart totals</h3>
+	<div class="table-responsive">
+		<table cellspacing="0" class="shop_table">
+			<tbody><tr class="cart-subtotal">
+				<th>Subtotal</th>
+				<td data-title="Subtotal"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">£</span>{{total}}</bdi></span></td>
+			</tr>
+			<tr class="order-total">
+				<th>Total</th>
+				<td data-title="Total"><strong><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">£</span>{{total}}</bdi></span></strong> </td>
+			</tr>
+					</tbody></table>
+	</div>
+
+	<div class="wc-proceed-to-checkout">
+
+<a href="https://themes.envytheme.com/vaximo/checkout/" class="default-btn">
+	Proceed to checkout</a>	</div>
+</div>    </div>
+</div>
+</div>
+	</div><!-- .entry-content -->
+
+	</article><!-- #post-9 -->
+			</div>
+	</div><!-- .entry-content -->
+	</article><!-- #post-9 -->
+	</div>
+</div>
+	</div>
+	<!-- Footer -->
+	<!-- Start Footer Area -->
+{% include 'project-compoments/footer.html' %}
+	</body>
+{% endblock %}

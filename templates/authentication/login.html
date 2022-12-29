@@ -1,6 +1,27 @@
-{% extends 'base.html' %}
+{% extends 'project-compoments/base.html' %}
 {% block content %}
+{% include 'project-compoments/header.html' %}
 {% load static %}
+<style>
+    .woocommerce button.button, .woocommerce input.button {
+    font-size: 100%;
+    margin: 0;
+    line-height: 1;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    overflow: visible;
+    padding: 0.618em 1em;
+    font-weight: 700;
+    border-radius: 3px;
+    left: auto;
+    color: #515151;
+    background-color: #d80650;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+</style>
 <!-- Start Page Title Area -->
 		<div class="page-title-area page-title-bg1" style="background-image:url();">
 			<div class="container">
@@ -16,7 +37,7 @@
 	<!-- End Page Title Area -->
 
 	<div class="page-main-content">		<div class="page-area ">
-			<div class="container">																			
+			<div class="container">
 <article id="post-11" class="post-11 page type-page status-publish hentry">
 	<div class="entry-content">
         {% if messages %}
@@ -33,7 +54,7 @@
             <form class="woocommerce-form woocommerce-form-login login" method="POST">
                 {% csrf_token %}
 
-                
+
                 <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
                     <label for="username">Email address&nbsp;<span class="required">*</span></label>
                     {{form.username}}
@@ -44,7 +65,7 @@
 <!--                    <input class=" woocommerce-Input&#45;&#45;text input-text form-control" type="password" name="password" id="password" autocomplete="current-password" />-->
                 </p>
 
-                
+
                 <p class="form-row">
                     <label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
                         <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span>Remember me</span>
@@ -55,16 +76,15 @@
                     <a href="https://themes.envytheme.com/vaximo/my-account/lost-password/">Lost your password?</a> <br>  <a href="{% url 'register' %}">Don't have account</a>
                 </p>
 
-                
+
             </form>
 
-        
+
 </div>
 	</div><!-- .entry-content -->
 
 	</article><!-- #post-11 -->
 											</div>		</div>
 	</div>
-	<!-- Footer -->
-	<!-- Start Footer Area -->
+{% include 'project-compoments/footer.html' %}
 {% endblock %}

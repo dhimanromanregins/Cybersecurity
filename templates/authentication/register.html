@@ -1,6 +1,30 @@
-{% extends 'base.html' %}
+{% extends 'project-compoments/base.html' %}
 {% block content %}
+{% include 'project-compoments/header.html' %}
 {% load static %}
+<style>
+    .woocommerce button.button, .woocommerce input.button {
+    font-size: 100%;
+    margin: 0;
+    line-height: 1;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    overflow: visible;
+    padding: 0.618em 1em;
+    font-weight: 700;
+    border-radius: 3px;
+    left: auto;
+    color: #515151;
+    background-color: #d80650;
+    border: 0;
+    display: inline-block;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+</style>
+
     	<!-- Start Page Title Area -->
 		<div class="page-title-area page-title-bg1" style="background-image:url();">
 			<div class="container">
@@ -63,6 +87,5 @@
 	</article><!-- #post-11 -->
 											</div>		</div>
 	</div>
-	<!-- Footer -->
-	<!-- Start Footer Area -->
+{% include 'project-compoments/footer.html' %}
 {% endblock %}

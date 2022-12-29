@@ -1,6 +1,7 @@
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django import forms
 from django.contrib.auth.models import User
+from .models import Contact
 
 
 class CustomUserForm(UserCreationForm):
@@ -50,6 +51,38 @@ class Loginform(AuthenticationForm):
     class Meta:
         model = User
         fields = ['username', 'password']
+
+
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = Contact
+        fields = ['name', 'email', 'contact', 'subject', 'message', 'policy']
+        widgets = {
+            'name': forms.TextInput(
+                attrs={'type': 'text', 'name': "name", 'class': 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control',
+                       'size':40,'aria-required':True,'aria-invalid':False,'placeholder': 'Your Name'}),
+            'email': forms.TextInput(
+                attrs={'type': 'email', 'name': "email",
+                       'class': 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control',
+                       'size': 40, 'aria-required': True, 'aria-invalid': False, 'placeholder': 'Your Email'}),
+            'contact': forms.TextInput(
+                attrs={'type': 'text', 'name': "contact",
+                       'class': 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control',
+                       'size': 40, 'aria-required': True, 'aria-invalid': False, 'placeholder': 'Your Number'}),
+            'subject': forms.TextInput(
+                attrs={'type': 'text', 'name': "subject",
+                       'class': 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control',
+                       'size': 40, 'aria-required': True, 'aria-invalid': False, 'placeholder': 'Your Subject'}),
+            'message': forms.Textarea(
+                attrs={'type': 'text', 'name': "message",
+                       'class': 'wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control',
+                       'size': 40, 'aria-required': True, 'aria-invalid': False, 'placeholder': 'Message'}),
+
+        }
+
+
+
+
 
 
 
